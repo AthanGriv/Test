@@ -24,13 +24,6 @@
 <p id="demo"></p>
 
 <script>
-function myFunction() {
-  var x = document.getElementById("myText").value;
-  document.getElementById("demo").innerHTML = x;
-}
-</script>
-
-<script>
 package com.mycompany.mavenproject2;
  
 import java.util.logging.Level;
@@ -39,6 +32,7 @@ import weka.classifiers.Classifier;
 import weka.classifiers.evaluation.Evaluation;
 import weka.classifiers.functions.MultilayerPerceptron;
 import weka.core.Instances;
+import weka.core.Instance;
 import weka.core.SerializationHelper;
 import weka.core.converters.ConverterUtils.DataSource;
 
@@ -62,6 +56,19 @@ String prediction=originalTrain.classAttribute().value((int)value);
 System.out.println("The predicted value of instance "+
                     Integer.toString(s1)+
                     ": "+prediction); 
+                    
+function myFunction() {
+  Instance inst = new DenseInstance(3); 
+  var at1 = document.getElementById("att1").value;
+  var at2 = document.getElementById("att2").value;
+  var at3 = document.getElementById("att3").value;
+  var at4 = document.getElementById("att4").value;
+  var at5 = document.getElementById("att5").value;
+  var at6 = document.getElementById("att6").value;
+  var at7 = document.getElementById("att7").value;
+  var at8 = document.getElementById("att8").value;
+  
+}
 </script>
 
 </body>
